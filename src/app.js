@@ -23,7 +23,6 @@ function formatDate(timestamp) {
 }
 
 function displayTemperature(response) {
-  console.log(response.data);
   let tempElement = document.querySelector("#temp");
   let cityElement = document.querySelector("#city");
   let descriptionElement = document.querySelector("#description");
@@ -40,6 +39,7 @@ function displayTemperature(response) {
 }
 
 let apiKey = "5e43efbfa939a4c99oedee942bt0f90f";
-let apiUrl = `https://api.shecodes.io/weather/v1/current?query={Accra}&key=${apiKey}&units=metric`;
+let city = "Accra";
+let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
 
 axios.get(apiUrl).then(displayTemperature);
