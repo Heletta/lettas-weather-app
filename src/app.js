@@ -45,8 +45,17 @@ http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condit
   iconElement.setAttribute("alt", response.data.condition.description);
 }
 
-let apiKey = "5e43efbfa939a4c99oedee942bt0f90f";
-let city = "Accra";
-let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+function search(city) {
+  let apiKey = "5e43efbfa939a4c99oedee942bt0f90f";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayTemperature);
+}
 
-axios.get(apiUrl).then(displayTemperature);
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#city-input");
+  search(cityInputElement.value);
+}
+search("Accra");
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
