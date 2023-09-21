@@ -61,3 +61,17 @@ li:first-letter {
   color: rgb(33, 33, 33);
   cursor: default;
 }
+.weather-forecast {
+  margin-top: 20px;
+  tect-align: center;
+}
+.weather-forecast-date {
+  font-size: 16px;
+}
+.weather-forecast-date .weather-forecast-temp-min {
+  color: #000;
+  opacity: 0.5;
+}
+.weather-forecast-temp {
+  font-size: 13px;
+}
