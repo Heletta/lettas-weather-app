@@ -63,14 +63,14 @@ li:first-letter {
 }
 .weather-forecast {
   margin-top: 20px;
-  tect-align: center;
+  text-align: center;
 }
 .weather-forecast-date {
   font-size: 16px;
 }
 .weather-forecast-date .weather-forecast-temp-min {
   color: #000;
-  opacity: 0.5;
+  opacity: 0.6;
 }
 .weather-forecast-temp {
   font-size: 13px;
